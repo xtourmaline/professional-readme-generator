@@ -1,5 +1,5 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// function that returns a license badge based on which license is passed in
+// if there is no license, returns empty string
 function renderLicenseBadge(license) {
     if (license === "None") {
         return "";
@@ -12,8 +12,8 @@ function renderLicenseBadge(license) {
     }
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// function that returns the license link
+// if there is no license, returns empty string
 function renderLicenseLink(license) {
     if (license === "None") {
         return "";
@@ -25,8 +25,8 @@ function renderLicenseLink(license) {
         return "https://opensource.org/licenses/MPL-2.0"
     }
 }
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+// returns the license section of README
+// if there is no license, returns empty string
 function renderLicenseSection(license) {
     if (license === "None") {
         return "";
@@ -39,7 +39,7 @@ function renderLicenseSection(license) {
     }
 }
 
-// TODO: Create a function to generate markdown for README
+// function to generate markdown for README
 function generateMarkdown(data) {
     let license = data.license;
     let licenseBadge = renderLicenseBadge(license);
