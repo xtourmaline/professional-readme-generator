@@ -68,4 +68,3 @@ function init() {
 
 // function call to initialize app
 init();
-    
