@@ -80,7 +80,7 @@ Email me [here](mailto:${data.email}) for any questions!
 
 or
 
-Check out more works at on [GitHub](https://github.com/${username}/)!
+Check out more works at on [GitHub](https://github.com/${data.username}/)!
 
 `;
 }
