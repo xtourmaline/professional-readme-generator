@@ -4,11 +4,11 @@ function renderLicenseBadge(license) {
     if (license === "None") {
         return "";
     } else if (license === "MIT") {
-        return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+        return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]";
     } else if (license === "GNU GPLv3") {
-        return "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
+        return "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)]";
     } else if (license === "MPL2.0") {
-        return "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)"
+        return "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)]"
     }
 }
 
@@ -47,12 +47,40 @@ function generateMarkdown(data) {
     let licenseSection = renderLicenseSection(license);
   
     return `
-# ${data.title}
+# ${data.title} ${licenseBadge}(${licenseLink})
 
 ## Description
 ${data.description}
 
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [License](#license)
+- [Questions](#questions)
 
+## Installation
+${data.installation}
+
+## Usage
+${data.usage}
+
+## Contributing
+${data.contribution}
+
+## Tests
+${data.contribution}
+
+## License
+${licenseSection}
+
+## Questions
+Email me [here](mailto:${data.email}) for any questions!
+
+or
+
+Check out more works at on [GitHub](https://github.com/${username}/)!
 
 `;
 }
